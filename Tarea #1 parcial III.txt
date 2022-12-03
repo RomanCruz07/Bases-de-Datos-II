@@ -1,0 +1,9 @@
+--EJERCICIO 1
+select sum (number) as sumaPersonas from bigquery-public-data.usa_names.usa_1910_2013 group by gender, name order by name desc;
+--EJERCICIO 2
+select date, state, tests_total, cases_positive_total, sum (tests_total) as totalTests from bigquery-public-data.covid19_covidtracking.summary group by state, date, tests_total, cases_positive_total
+--EJERCICIO 3
+select ((totals.pageviews)/sum(totals.pageviews)) from bigquery-public-data.google_analytics_sample.ga_sessions_20170801
+
+select totals.pageviews from bigquery-public-data.google_analytics_sample.ga_sessions_20170801
+--EJERCICIO 4
